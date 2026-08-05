@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PokeBattleLog</title>
+</head>
+<body>
+
+    <h1>PokeBattleLog - 戦績一覧</h1>
+    <a href="/new">新規登録</a>
+
+    <h2>戦績一覧</h2>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>日付</th>
+            <th>自分のデッキ</th>
+            <th>相手のデッキ</th>
+            <th>結果</th>
+            <th>メモ</th>
+            <th>削除</th>
+        </tr>
+
+        {% for b in battles %}
+        <tr>
+            <td>{{ b[0] }}</td>
+            <td>{{ b[1] }}</td>
+            <td>{{ b[2] }}</td>
+            <td>{{ b[3] }}</td>
+            <td>{{ b[4] }}</td>
+            <td>{{ b[5] }}</td>
+            <td><a href="/delete/{{ b[0] }}">削除</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>デッキごとの勝率</h2>
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>デッキ名</th>
+            <th>勝率 (%)</th>
+        </tr>
+
+        {% for deck, rate in winrates.items() %}
+        <tr>
+            <td>{{ deck }}</td>
+            <td>{{ rate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
