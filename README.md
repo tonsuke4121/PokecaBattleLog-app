@@ -64,3 +64,14 @@ Dockerfile
 templates/
 ├── index.html
 └── new.html
+
+### 2. アプリを起動
+
+```bash
+python app.py
+
+### 3. ブラウザでアクセス
+```bash
+http://localhost:5000
+
+---
