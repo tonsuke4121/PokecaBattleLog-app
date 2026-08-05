@@ -58,61 +58,9 @@ Docker コンテナとして実行できるため、
 ## ローカルでの実行方法
 
 ### 1. 必要ファイルを配置
-
+```text
 app.py
 Dockerfile
 templates/
 ├── index.html
 └── new.html
-
-### 2. アプリを起動
-```bash
-python app.py
-
-### 3. ブラウザでアクセス
-
-http://localhost:5000
-
-## Docker コンテナでの実行方法
-
-### 1. Docker イメージをビルド
-
-docker build -t pokeca-battle-log .
-
-### 2. コンテナを起動
-
-docker run -p 5000:5000 pokeca-battle-log
-
-### 3. ブラウザでアクセス
-
-http://localhost:5000
-
-
-
-## 動作例
-
-### 戦績一覧画面
-<img width="2879" height="1662" alt="image" src="https://github.com/user-attachments/assets/f2e9c80b-6f92-45a0-9d9f-332ec2ab29bc" />
-
-### 新規戦績登録画面
-<img width="2869" height="1577" alt="image" src="https://github.com/user-attachments/assets/f1f2c576-8889-4ef9-8da3-e7fb5b642086" />
-
-### デッキごとの勝率表示
-<img width="2867" height="1577" alt="image" src="https://github.com/user-attachments/assets/cd9971ca-7af4-4afb-920c-c23e400a6907" />
-
-
-## 使い方
-
-1. トップページの「新規登録」をクリック
-
-2. 対戦情報を入力して「登録」
-
-3. 戦績一覧に追加されたことを確認
-
-4. 不要な戦績は「削除」リンクから削除
-
-5. デッキごとの勝率を確認してデッキの傾向を分析
-
-
-## リポジトリ URL
-https://github.com/tonsuke4121/PokecaBattleLog-app
